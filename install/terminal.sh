@@ -14,3 +14,7 @@ yay -S exa --noconfirm
 echo "Installing ncdu - tool to search for files to delete"
 yay -S ncdu --noconfirm
 
+
+ysy -S neofetch --noconfirm
+
+yay -S unimatrix --noconfirm

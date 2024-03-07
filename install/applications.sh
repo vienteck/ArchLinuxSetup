@@ -1,5 +1,7 @@
 #!/bin/bash
 
+c=$(pwd)
+
 # Tool to remote into windows remote desktop
 echo "Installing Rdesktop"
 yay -S rdesktop --noconfirm
@@ -13,7 +15,6 @@ yay -S postman-bin --noconfirm
 
 
 #Neovim
-c=$(pwd)
 echo "Installing Neovim"
 yay -S neovim --noconfirm
 echo "Downloading custom configuration"

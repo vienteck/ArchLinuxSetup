@@ -3,6 +3,9 @@
 echo "Installing nmap"
 yay -S nmap --noconfirm
 
+echo "Installing rustscan"
+yay -S rustscan --noconfirm
+
 echo "Installing htop"
 yay -S htop --noconfirm
 
