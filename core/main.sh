@@ -25,24 +25,21 @@ sudo pacman -Syu --noconfirm
 echo "Getting requirements to install yay"
 sudo pacman -S --needed base-devel git
 
-# Specify the directory containing the scripts
-scripts_directory="install"
+#make all sh files executable
+chmod +x ./install/*sh
 
-# Check if the directory exists
-if [ -d "$scripts_directory" ]; then
-    # Loop through each shell script file in the directory
-    for script_file in ./"$scripts_directory"/*.sh; do
-        # Check if the file is executable
-        if [ -x "$script_file" ]; then
-            echo "Executing: $script_file"
-            . "$script_file"
-        else
-            echo "Warning: Skipping non-executable file - $script_file"
-        fi
-    done
-else
-    echo "Error: Directory '$scripts_directory' not found."
-fi
+source ./install/yay.sh
+clear
+source ./install/applications.sh
+clear
+source ./install/fonts.sh
+clear
+source ./install/network_utilities.sh
+clear
+source ./install/swe.sh
+clear
+source ./install/terminal.sh
+clear
 # source ../hyprland/hyprland.sh
 
 echo "rebooting in 5 seconds"

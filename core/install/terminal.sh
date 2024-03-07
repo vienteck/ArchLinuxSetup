@@ -1,6 +1,5 @@
 #!/bin/bash
-
-echo "Installig kitty terminal"
+echo "Installing kitty terminal"
 yay -S kitty --noconfirm
 
 echo "Installing command line text processing tools"
@@ -14,3 +13,4 @@ yay -S exa --noconfirm
 
 echo "Installing ncdu - tool to search for files to delete"
 yay -S ncdu --noconfirm
+

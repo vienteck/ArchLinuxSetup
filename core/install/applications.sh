@@ -8,14 +8,12 @@ yay -S rdesktop --noconfirm
 echo "Installing Postman"
 yay -S postman-bin --noconfirm
 
-echo "Installing gparted"
-yay -S gparted-git --noconfirm
+#echo "Installing gparted"
+#yay -S gparted-git --noconfirm
 
 
 #Neovim
 echo "Installing Neovim"
 yay -S neovim --noconfirm
-cd ~/.config
 echo "Downloading custom configuration"
-git clone https://github.com/vienteck/nvim
-cd ~/
+git clone https://github.com/vienteck/nvim ~/.config
