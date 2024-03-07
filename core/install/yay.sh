@@ -3,7 +3,8 @@ echo "Begin Installing yay package manager"
 cur_dir=$(pwd)
 echo "Moving to home directory"
 echo "Cloning yay.git"
-git clone https://aur.archlinux.org/yay.git ~/
+cd ~/
+git clone https://aur.archlinux.org/yay.git
 echo "Moving into yay folder"
 cd ~/yay
 echo "Making yay package..."
