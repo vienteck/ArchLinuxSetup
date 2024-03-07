@@ -13,7 +13,10 @@ yay -S postman-bin --noconfirm
 
 
 #Neovim
+c=$(pwd)
 echo "Installing Neovim"
 yay -S neovim --noconfirm
 echo "Downloading custom configuration"
-git clone https://github.com/vienteck/nvim ~/.config
+cd ~/.config
+git clone https://github.com/vienteck/nvim
+cd $c
