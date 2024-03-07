@@ -25,12 +25,13 @@ sudo pacman -Syu --noconfirm
 echo "Getting requirements to install yay"
 sudo pacman -S --needed base-devel git
 
-source install/yay.sh
-source install/terminal.sh
-source install/swe.sh
-source install/applications.sh
-source install/network_utilities.sh
-source install/fonts.sh
+source ./install/yay.sh;
+source ./install/terminal.sh;
+source ./install/terminal.sh;
+source ./install/swe.sh;
+source ./install/applications.sh;
+source ./install/network_utilities.sh;
+source ./install/fonts.sh;
 
 # source ../hyprland/hyprland.sh
 
