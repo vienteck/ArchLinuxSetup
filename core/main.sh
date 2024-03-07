@@ -32,6 +32,8 @@ source install/applications.sh
 source install/network_utilities.sh
 source install/fonts.sh
 
+# source ../hyprland/hyprland.sh
+
 echo "rebooting in 5 seconds"
 sleep 5
 

@@ -1,13 +1,13 @@
 #!/bin/bash
 
 echo "Installing nmap"
-sudo yay -S nmap
+yay -S nmap --noconfirm
 
 echo "Installing htop"
-sudo yay -S htop
+yay -S htop --noconfirm
 
 echo "Instalilng ssh"
-sudo yay -S ssh
+yay -S openssh --noconfirm
 
 echo "Installing Proton VPN"
-sudo yay -S openvpn
+yay -S openvpn --noconfirm

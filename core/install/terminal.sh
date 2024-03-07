@@ -1,13 +1,16 @@
 #!/bin/bash
 
+echo "Installig kitty terminal"
+yay -S kitty --noconfirm
+
 echo "Installing command line text processing tools"
-sudo yay -S sed awk grep
+yay -S sed awk grep --noconfirm
 
 echo "Installing tmux - a terminal multiplexer"
-sudo yay -S tmux
+yay -S tmux --noconfirm
 
 echo "Installing exa - a modern replacement for ls"
-sudo yay -S exa
+yay -S exa --noconfirm
 
 echo "Installing ncdu - tool to search for files to delete"
-sudo yay -S ncdu
+yay -S ncdu --noconfirm

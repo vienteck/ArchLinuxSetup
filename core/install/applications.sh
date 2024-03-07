@@ -2,19 +2,19 @@
 
 # Tool to remote into windows remote desktop
 echo "Installing Rdesktop"
-sudo yay -S Rdesktop
+yay -S rdesktop --noconfirm
 
 # PostMan tool for api testing
 echo "Installing Postman"
-sudo yay -S postman-bin
+yay -S postman-bin --noconfirm
 
 echo "Installing gparted"
-sudo yay -S gparted-git
+yay -S gparted-git --noconfirm
 
 
 #Neovim
 echo "Installing Neovim"
-sudo yay -S neovim
+yay -S neovim --noconfirm
 cd ~/.config
 echo "Downloading custom configuration"
 git clone https://github.com/vienteck/nvim

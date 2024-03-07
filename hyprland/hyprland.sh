@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Installing hyprland dependencies"
-sudo yay -S gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus
+yay -S gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus hyprlang
 
-sudo yay -S wlroots
+yay -S wlroots
 
 echo "Downloading hyprland source code"
 cd ~/
@@ -25,8 +25,11 @@ read -p "" p
 
 case $p in 
     "YES")
-        curl -s "https://end-4.github.io/dots-hyprland-wiki/setup.sh"
+        cd ~/
+        git clone https://github.com/end-4/dots-hyprland
+        cd dots-hyprland
+        bash install.sh 
         sleep 0;;
     *)
-        echo "end-4 dot files will not be installed";;
+        echo "end-4 dot files will not be applied";;
 esac
