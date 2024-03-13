@@ -13,6 +13,11 @@ yay -S postman-bin --noconfirm
 #echo "Installing gparted"
 #yay -S gparted-git --noconfirm
 
+#something is draining my battery, this will help me determine what it is
+yay -S powertop --noconfirm
+
+#audio wasnt working until i installed this
+yay -S sof-firmware --noconfirm
 
 #Neovim
 echo "Installing Neovim"
