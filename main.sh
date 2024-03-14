@@ -43,10 +43,10 @@ clear
 source ./install/swe.sh
 sleep 5
 clear
-source ./install/terminal.sh
-sleep 5
-clear
 source ./install/hyprland.sh
+sleep 5
+clearsh
+source ./install/terminal.sh
 sleep 5
 clear
 # source ../hyprland/hyprland.sh
