@@ -31,9 +31,6 @@ chmod +x ./install/*sh
 source ./install/yay.sh
 sleep 5
 clear
-source ./install/applications.sh
-sleep 5
-clear
 source ./install/fonts.sh
 sleep 5
 clear
@@ -45,7 +42,10 @@ sleep 5
 clear
 source ./install/hyprland.sh
 sleep 5
-clearsh
+clear
+source ./install/applications.sh
+sleep 5
+clear
 source ./install/terminal.sh
 sleep 5
 clear
