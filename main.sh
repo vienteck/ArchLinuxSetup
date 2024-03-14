@@ -40,15 +40,16 @@ clear
 source ./install/swe.sh
 sleep 5
 clear
-source ./install/hyprland.sh
-sleep 5
-clear
 source ./install/applications.sh
 sleep 5
 clear
 source ./install/terminal.sh
 sleep 5
 clear
+source ./install/hyprland.sh
+sleep 5
+clear
+
 # source ../hyprland/hyprland.sh
 
 echo "rebooting in 5 seconds"
