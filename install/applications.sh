@@ -15,7 +15,7 @@ yay -S postman-bin --noconfirm
 
 #something is draining my battery, this will help me determine what it is
 yay -S powertop --noconfirm
-yay -S laptop-mode-tools --noconfirm
+
 #audio wasnt working until i installed this
 yay -S sof-firmware --noconfirm
 
@@ -27,8 +27,6 @@ yay -S fprintd --noconfirm
 yay -S libfprint --noconfirm
 yay -S imagemagick --noconfirm
 
-
-yay -S libva-utils
 
 #Neovim
 echo "Installing Neovim"
