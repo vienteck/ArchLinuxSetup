@@ -3,15 +3,12 @@
 c=$(pwd)
 
 # Tool to remote into windows remote desktop
-echo "Installing Rdesktop"
-yay -S rdesktop --noconfirm
+echo "Installing remmina"
+yay -S remmina --noconfirm
 
 # PostMan tool for api testing
 echo "Installing Postman"
 yay -S postman-bin --noconfirm
-
-#echo "Installing gparted"
-#yay -S gparted-git --noconfirm
 
 #something is draining my battery, this will help me determine what it is
 yay -S powertop --noconfirm
