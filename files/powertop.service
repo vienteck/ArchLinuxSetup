@@ -3,8 +3,6 @@ Description=PowerTOP auto tune
 
 [Service]
 Type=oneshot
-Environment="TERM=dumb"
-RemainAfterExit=true
 ExecStart=/usr/bin/powertop --auto-tune
 
 [Install]

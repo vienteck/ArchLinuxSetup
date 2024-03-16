@@ -1,34 +1,46 @@
 #!/bin/bash
 
-c=$(pwd)
+echo "Begin Installing yay package manager"
+cur_dir=$(pwd)
+echo "Moving to home directory"
+echo "Cloning yay.git"
+cd ~/
+git clone https://aur.archlinux.org/yay.git
+echo "Moving into yay folder"
+cd ~/yay
+echo "Making yay package..."
+makepkg -si
+echo "Moving back to home directory"
+cd $cur_dir
 
-# Tool to remote into windows remote desktop
-echo "Installing remmina"
-yay -S remmina --noconfirm
+echo "Installing kitty terminal"
+yay -S kitty --noconfirm
 
-# PostMan tool for api testing
-echo "Installing Postman"
-yay -S postman-bin --noconfirm
+echo "Installing command line text processing tools"
+yay -S sed awk grep tmux exa ncdu neofetch unimatrix --noconfirm
 
-#something is draining my battery, this will help me determine what it is
-yay -S powertop --noconfirm
+yay -S powertop fwupd fprintd libfprint imagemagick --noconfirm
 
-#audio wasnt working until i installed this
-yay -S sof-firmware --noconfirm
+yay -S remmina postman-bin libreoffice-still --noconfirm
 
-#firmware manager
-yay -S fwupd --noconfirm
+yay -S go rustup pyenv nvm nmap rustscan htop openssh openvpn--noconfirm
 
-#fingerprint reader setup
-yay -S fprintd --noconfirm
-yay -S libfprint --noconfirm
-yay -S imagemagick --noconfirm
+mkdir -p ~/.config/fontconfig
+#copy to share for systemwide sharing
+sudo cp ~/ArchLinuxSetup/fonts/*.ttf /usr/share/fonts/
+sudo fc-cache -f -v
 
+sudo cp ~/ArchLinuxSetup/fonts/local.conf ~/.config/fontconfig/fonts.conf
 
-#Neovim
-echo "Installing Neovim"
-yay -S neovim --noconfirm
-echo "Downloading custom configuration"
-cd ~/.config
-git clone https://github.com/vienteck/nvim
-cd $c
+sudo fc-cache -f -v
+
+mkdir ~/Downloads
+cd ~/Downloads
+
+git clone --depth=1 https://gitlab.com/stephan-raabe/dotfiles.git
+
+cd dotfiles
+
+./install.sh
+
+sudo cp ~/ArchLinuxSetup/files/powertop.service /etc/systemd/system/
