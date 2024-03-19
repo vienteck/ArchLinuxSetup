@@ -21,7 +21,7 @@ yay -S sed awk grep tmux exa ncdu neofetch unimatrix --noconfirm
 
 yay -S powertop fwupd fprintd libfprint imagemagick --noconfirm
 
-yay -S remmina postman-bin libreoffice-still --noconfirm
+yay -S remmina postman-bin libreoffice-still obsidian --noconfirm
 
 yay -S go rustup pyenv nvm nmap rustscan htop openssh openvpn--noconfirm
 
