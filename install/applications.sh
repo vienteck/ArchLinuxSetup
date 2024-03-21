@@ -17,7 +17,7 @@ echo "Installing kitty terminal"
 yay -S kitty --noconfirm
 
 echo "Installing command line text processing tools"
-yay -S sed awk grep tmux exa ncdu neofetch unimatrix --noconfirm
+yay -S sed awk grep tmux exa ncdu neofetch unimatrix github-cli --noconfirm
 
 yay -S powertop fwupd fprintd libfprint imagemagick --noconfirm
 
