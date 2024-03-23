@@ -14,7 +14,7 @@ echo "Moving back to home directory"
 cd $cur_dir
 
 echo "Installing kitty terminal"
-yay -S kitty --noconfirm
+yay -S alacritty --noconfirm
 
 echo "Installing command line text processing tools"
 yay -S sed awk grep tmux exa ncdu neofetch unimatrix github-cli --noconfirm
