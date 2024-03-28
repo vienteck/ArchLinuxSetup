@@ -3,7 +3,8 @@
 printf "Hello there\n"
 printf "This script will install several tools that I have curated for a fresh arch installation\n" 
 printf "It contains networking, text, terminal, etc. tools\n"
-printf "Most importantly it will install hyprland from source and apply end-4s dot files for hyprland\n"
+printf "Most importantly it will install hyprland from source and apply ML4W dot files for hyprland\n"
+printf "I am using my custom dotfiles so if you don't want those uncomment that in the instlal.sh file\n'"
 
 printf "Please confirm that you are ready to install everything that is in the installation script\n"
 printf "\e[97m"
@@ -28,9 +29,8 @@ sudo pacman -S --needed base-devel git
 #make all sh files executable
 chmod +x ./install/*sh
 
-source ./install/applications.sh
+source ./install/install.sh
 sleep 5
 clear
-# source ../hyprland/hyprland.sh
 
 
