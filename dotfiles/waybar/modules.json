@@ -30,7 +30,7 @@
     // Taskbar
     "wlr/taskbar": {
         "format": "{icon}",
-        "icon-size": 18,
+        "icon-size": 40,
         "tooltip-format": "{title}",
         "on-click": "activate",
         "on-click-middle": "close",
@@ -69,16 +69,7 @@
     "custom/empty": {
         "format": ""
     },
-
-    // Youtube Subscriber Count
-    "custom/youtube": {
-        "format": " {}",
-        "exec": "python ~/private/youtube.py",
-        "restart-interval": 600,
-        "on-click": "chromium https://studio.youtube.com",
-        "tooltip": false
-    },
-    
+  
     // Cliphist
     "custom/cliphist": {
         "format": "",
@@ -109,13 +100,7 @@
         "tooltip": false
     },
 
-    // Waybar Themes
-    "custom/waybarthemes": {
-        "format": "",
-        "on-click": "~/dotfiles/waybar/themeswitcher.sh",
-        "tooltip": false
-    },
-    
+   
     // Settings
     "custom/settings": {
         "format": "",
@@ -151,6 +136,19 @@
         "tooltip": false
     },
 
+    // SMS
+    "custom/sms": {
+        "format": "",
+        "on-click": "~/dotfiles/.settings/sms.sh",
+        "tooltip": false
+    },
+
+    // Steam
+    "custom/steam": {
+        "format": "",
+        "on-click": "steam",
+        "tooltip": false
+    },
     // Browser Launcher
     "custom/browser": {
         "format": "",
@@ -160,7 +158,7 @@
 
     // ChatGPT Launcher
     "custom/chatgpt": {
-        "format": " ",
+        "format": "",
         "on-click": "chromium --app=https://chat.openai.com",
         "tooltip": false
     },
@@ -283,9 +281,6 @@
     "group/settings": {
         "orientation": "horizontal",
         "modules": [
-            // START CHATGPT TOOGLE
-            "custom/chatgpt",
-            // END CHATGPT TOOGLE
             "custom/settings",
             "custom/waybarthemes",
             "custom/wallpaper"
@@ -298,6 +293,10 @@
         "modules": [
             "custom/browser",
             "custom/filemanager",
+            "custom/teams",
+            "custom/sms",
+            "custom/steam",
+            "custom/chatgpt",
          ]
     },
 

@@ -136,3 +136,6 @@ else
         echo "Start Hyprland with command Hyprland"
     fi
 fi
+
+source /etc/profile.d/vte.sh
+source /usr/share/nvm/init-nvm.sh

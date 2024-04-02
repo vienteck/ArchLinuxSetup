@@ -23,7 +23,6 @@
 @define-color textcolor2 #000000;
 @define-color textcolor3 #FFFFFF;
 @define-color iconcolor #FFFFFF;
-
 /* -----------------------------------------------------
  * General 
  * ----------------------------------------------------- */
@@ -47,15 +46,15 @@ window#waybar {
  * ----------------------------------------------------- */
 
  #workspaces {
-    margin: 3px 7px 3px 3px;
+    margin: 3px 20px 3px 20px;
     border: 0px;
-    font-size: 14px;
+    font-size: 30px;
     color: @textcolor1;
 }
 
 #workspaces button {
     border: 0px;
-    margin:4px 5px 4px 0px;
+    margin:4px 7px 4px 0px;
     padding:0px 4px 0px 4px;
     color: @textcolor3;
     transition: all 0.5s ease-in-out;
@@ -96,7 +95,7 @@ tooltip label {
     margin: 0px 15px 0px 0px;
     border-radius: 12px;
     color:@textcolor;
-    font-size:14px;
+    font-size:20px;
     font-weight:normal;
 }
 
@@ -136,7 +135,7 @@ window#waybar.empty #window {
 #custom-system,
 #custom-waybarthemes {
     margin-right: 23px;
-    font-size: 14px;
+    font-size: 25px;
     font-weight: bold;
     color: @iconcolor;
 }
@@ -173,14 +172,14 @@ window#waybar.empty #window {
 
  #idle_inhibitor {
     margin-right: 15px;
-    font-size: 16px;
+    font-size: 30px;
     font-weight: bold;
     color: @iconcolor;
 }
 
 #idle_inhibitor.activated {
     margin-right: 15px;
-    font-size: 14px;
+    font-size: 25px;
     font-weight: bold;
     color: #dc2f2f;
 }
@@ -190,9 +189,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-appmenuicon {
-    font-size: 20px;
+    font-size: 25px;
     color: @textcolor;
-    margin: 0px 15px 0px 10px;
+    margin: 0px 20px 0px 10px;
 }
 
 /* -----------------------------------------------------
@@ -200,9 +199,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-exit {
-    margin: 0px 20px 0px 0px;
+    margin: 0px 30px 0px 10px;
     padding:0px;
-    font-size:16px;
+    font-size:30px;
     color: @iconcolor;
 }
 
@@ -211,10 +210,10 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-    font-size: 14px;
+    font-size: 25px;
     color: @textcolor;
     border-radius: 15px;
-    margin: 0px 15px 0px 0px;
+    margin: 0px 15px 0px 15px;
 }
 
 #custom-updates.green {
@@ -247,7 +246,7 @@ window#waybar.empty #window {
  #disk,#memory,#cpu,#language {
     margin:0px;
     padding:0px;
-    font-size:14px;
+    font-size:25px;
     color:@iconcolor;
 }
 
@@ -260,9 +259,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-    font-size: 15px;
+    font-size: 25px;
     color: @textcolor;
-    margin: 0px 15px 0px 0px;
+    margin: 0px 20px 0px 20px;
 }
 
 /* -----------------------------------------------------
@@ -270,7 +269,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-    font-size: 14px;
+    font-size: 25px;
     color: @textcolor;
     border-radius: 15px;
     margin: 0px 15px 0px 0px;
@@ -285,7 +284,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-    font-size: 14px;
+    font-size: 25px;
     color: @textcolor;
     border-radius: 15px;
     margin: 0px 15px 0px 0px;
@@ -304,10 +303,10 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
  #bluetooth, #bluetooth.on, #bluetooth.connected {
-    font-size: 14px;
+    font-size: 25px;
     color: @textcolor;
     border-radius: 15px;
-    margin: 10px 15px 10px 0px;
+    margin: 10px 20px 10px 15px;
 }
 
 #bluetooth.off {
@@ -321,10 +320,10 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #battery {
-    font-size: 14px;
+    font-size: 25px;
     color: @textcolor;
     border-radius: 15px;
-    margin: 10px 15px 10px 0px;
+    margin: 10px 20px 10px 15px;
 }
 
 #battery.charging, #battery.plugged {

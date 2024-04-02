@@ -2,6 +2,7 @@
 
 echo "Installing yay package manager"
 install_directory=$(pwd)
+
 echo "Moving to home directory"
 echo "Cloning yay.git"
 cd ~/
@@ -17,7 +18,7 @@ echo "Installing kitty terminal"
 yay -S alacritty --noconfirm
 
 echo "Installing command line text processing tools"
-yay -S sed awk grep tmux exa ncdu neofetch unimatrix github-cli --noconfirm
+yay -S sed awk grep bat tmux exa ncdu neofetch unimatrix github-cli --noconfirm
 
 #Netoworking tools
 yay -S tcpdump nmap rustscan htop openssh openvpn

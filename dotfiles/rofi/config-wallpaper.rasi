@@ -36,7 +36,7 @@ configuration {
 
 /* ---- Window ---- */
 window {
-    width:                        761px;
+    width:                        1900px;
     x-offset:                     0px;
     y-offset:                     65px;
     spacing:                      0px;
@@ -75,7 +75,7 @@ imagebox {
 
 /* ---- Listbox ---- */
 listbox {
-    spacing:                     20px;
+    spacing:                     10px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "inputbar", "message", "listview" ];
@@ -226,7 +226,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        100px;
+    size:                        300px;
     cursor:                      inherit;
     horizontal-align:              0.5;
 }

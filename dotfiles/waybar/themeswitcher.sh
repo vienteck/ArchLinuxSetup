@@ -55,5 +55,5 @@ choice=$(echo -e "$listNames" | rofi -dmenu -replace -i -config ~/dotfiles/rofi/
 if [ "$choice" ]; then
     echo "Loading waybar theme..."
     echo "${listThemes[$choice+1]}" > ~/.cache/.themestyle.sh
-    ~/dotfiles/waybar/launch.sh
+    ~/dotfiles/waybar/mlaunch.sh
 fi
