@@ -18,10 +18,13 @@ echo "Installing kitty terminal"
 yay -S alacritty --noconfirm
 
 echo "Installing command line text processing tools"
-yay -S sed awk grep bat tmux exa ncdu neofetch unimatrix github-cli --noconfirm
+yay -S sed awk grep bat tmux eza ncdu neofetch unimatrix github-cli --noconfirm
+
+#Ethical Hacking Tools
+#yay -S nmap hydra aircrack-ng snort metasploit  --noconfirm
 
 #Netoworking tools
-yay -S tcpdump nmap rustscan htop openssh openvpn
+yay -S tcpdump rustscan htop openssh openvpn tor
 
 yay -S powertop fwupd fprintd libfprint imagemagick --noconfirm
 
@@ -31,15 +34,18 @@ yay -S remmina gimp postman-bin libreoffice-still obsidian --noconfirm
 #Programming Languages
 yay -S go rustup pyenv nvm --noconfirm
 
+#copy to share for systemwide sharing. Add any custom fonts in the fonts folder
 mkdir -p ~/.config/fontconfig
-#copy to share for systemwide sharing
-#Add any custom fonts in the fonts folder
-sudo cp ~/ArchLinuxSetup/fonts/*.ttf /usr/share/fonts/
+sudo cp $install_directory/fonts/*.ttf /usr/share/fonts/
 sudo fc-cache -f -v
 
 sudo cp $install_directory/fonts/local.conf ~/.config/fontconfig/fonts.conf
-
 sudo fc-cache -f -v
+
+
+
+mkdir ~/dotfiles-version
+cp $install_direcotry/files/hook.sh ~/dotfiles-verison
 
 mkdir ~/Downloads
 cd ~/Downloads
@@ -50,9 +56,11 @@ cd dotfiles
 
 ./install.sh
 
-sudo cp $install_directory/files/powertop.service /etc/systemd/system/
+#sudo rm -r ~/dotfiles
 
-sudo rm -r ~/dotfiles
-
-#install custom dotfiles.comment next line if you want ml4w dotfiles
+#install custom dotfiles.
+#comment next line if you want ml4w dotfiles
 cp -r $install_directory/dotfiles ~/
+
+sudo ln -s ~/dotfiles/scripts/powertop.service /etc/systemd/system/
+
