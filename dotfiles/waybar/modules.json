@@ -11,6 +11,8 @@
 {
     // Workspaces
     "hyprland/workspaces" : {
+        "on-scroll-up": "hyprctl dispatch workspace r-1",
+        "on-scroll-down": "hyprctl dispatch workspace r+1",        
         "on-click": "activate",
         "active-only": false,
         "all-outputs": true,
@@ -21,16 +23,14 @@
 			"default": ""
         },
         "persistent-workspaces": {
-            // START WORKSPACES
-            "*": 7
-            // END WORKSPACES
+            "*": 5
         }       
     },
 
     // Taskbar
     "wlr/taskbar": {
         "format": "{icon}",
-        "icon-size": 40,
+        "icon-size": 18,
         "tooltip-format": "{title}",
         "on-click": "activate",
         "on-click-middle": "close",
@@ -60,52 +60,64 @@
 
     // ML4W Welcome App
     "custom/ml4w-welcome": {
-        "on-click": "~/dotfiles/apps/ML4W_Welcome-x86_64.AppImage",
+        "on-click": "sleep 0.1 && ~/dotfiles/eww/ml4w-sidebar/launch.sh",
+        "on-click-right": "sleep 0.1 && ~/dotfiles/apps/ML4W_Welcome-x86_64.AppImage",
         "format": " ",
-        "tooltip": false
+        "tooltip-format": "Open Sidebar"
     },
 
+    // ML4W Welcome App
+    "custom/ml4w-hyprland-settings": {
+        "on-click": "~/dotfiles/apps/ML4W_Hyprland_Settings-x86_64.AppImage",
+        "format": " ",
+        "tooltip-format": "ML4W Hyprland Settings"
+    },
+    
     // Empty
     "custom/empty": {
         "format": ""
     },
-  
+
     // Cliphist
     "custom/cliphist": {
         "format": "",
         "on-click": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh",
         "on-click-right": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh d",
         "on-click-middle": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh w",
-        "tooltip": false
+        "tooltip-format": "Clipboard Manager"
     },
 
     // Updates Count
     "custom/updates": {
-        "format": "  {}",
-        "tooltip-format": "{}",
+        "format": "   {}",
         "escape": true,
         "return-type": "json",       
         "exec": "~/dotfiles/scripts/updates.sh",
         "restart-interval": 60,
         "on-click": "alacritty --class dotfiles-floating -e ~/dotfiles/scripts/installupdates.sh",
-        "on-click-right": "~/dotfiles/.settings/software.sh",
-        "tooltip": false
+        "on-click-right": "~/dotfiles/.settings/software.sh"
     },
     
     // Wallpaper
     "custom/wallpaper": {
         "format": "",
-        "on-click": "~/dotfiles/hypr/scripts/wallpaper.sh select",
-        "on-click-right": "~/dotfiles/hypr/scripts/wallpaper.sh",
-        "tooltip": false
+        "on-click": "waypaper",
+        "on-click-right": "~/dotfiles/hypr/scripts/wallpaper-effects.sh",
+        "tooltip-format": "Left: Select a wallpaper\nRight: Select wallpaper effect"
     },
 
-   
+    // Waybar Themes
+    "custom/waybarthemes": {
+        "format": "",
+        "on-click": "~/dotfiles/waybar/themeswitcher.sh",
+        "tooltip-format": "Select a waybar theme"
+    },
+    
     // Settings
     "custom/settings": {
         "format": "",
         "on-click": "~/dotfiles/apps/ML4W_Dotfiles_Settings-x86_64.AppImage",
-        "tooltip": false
+        "tooltip-format": "ML4W Dotfiles Settings"
     },
 
     // Keybindings
@@ -115,59 +127,18 @@
         "tooltip": false
     },
 
-    // Filemanager Launcher
-    "custom/filemanager": {
-        "format": "",
-        "on-click": "~/dotfiles/.settings/filemanager.sh",
-        "tooltip": false
-    },
-
-    // Outlook Launcher
-    "custom/outlook": {
-        "format": "",
-        "on-click": "chromium --app=https://outlook.office.com/mail/",
-        "tooltip": false
-    },
-
-    // Teams Launcher
-    "custom/teams": {
-        "format": "",
-        "on-click": "chromium --app=https://teams.microsoft.com/go",
-        "tooltip": false
-    },
-
-    // SMS
-    "custom/sms": {
-        "format": "",
-        "on-click": "~/dotfiles/.settings/sms.sh",
-        "tooltip": false
-    },
-
-    // Steam
-    "custom/steam": {
-        "format": "",
-        "on-click": "steam",
-        "tooltip": false
-    },
-    // Browser Launcher
-    "custom/browser": {
-        "format": "",
-        "on-click": "~/dotfiles/.settings/browser.sh",
-        "tooltip": false
-    },    
-
     // ChatGPT Launcher
     "custom/chatgpt": {
-        "format": "",
-        "on-click": "chromium --app=https://chat.openai.com",
-        "tooltip": false
+        "format": " ",
+        "on-click": "~/dotfiles/.settings/ai.sh",
+        "tooltip-format": "AI Support"
     },
 
     // Calculator
     "custom/calculator": {
         "format": "",
         "on-click": "qalculate-gtk",
-        "tooltip": false
+        "tooltip-format": "Open calculator"
     },
 
     // Windows VM
@@ -180,11 +151,11 @@
     // Rofi Application Launcher
     "custom/appmenu": {
         // START APPS LABEL
-        "format": "Software",
+        "format": "Apps",
         // END APPS LABEL
         "on-click": "sleep 0.2;rofi -show drun -replace",
         "on-click-right": "~/dotfiles/hypr/scripts/keybindings.sh",
-        "tooltip": false
+        "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
     },
 
     // Rofi Application Launcher
@@ -192,14 +163,34 @@
         "format": "",
         "on-click": "rofi -show drun -replace",
         "on-click-right": "~/dotfiles/hypr/scripts/keybindings.sh",
-        "tooltip": false
+        "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
     },    
 
     // Power Menu
     "custom/exit": {
         "format": "",
         "on-click": "wlogout",
-        "tooltip": false
+        "tooltip-format": "Power Menu"
+    },
+
+    // Hyprshade
+    "custom/hyprshade": {
+        "format": "",
+        "tooltip-format": "Toggle Screen Shader",
+        "on-click": "sleep 0.5; ~/dotfiles/hypr/scripts/hyprshade.sh",
+        "on-click-right": "sleep 0.5; ~/dotfiles/hypr/scripts/hyprshade.sh rofi"
+    },
+
+    // Hypridle inhibitor
+    "custom/hypridle": {
+        "format": "",
+        "return-type": "json",
+        "escape": true,
+        "exec-on-event": true,
+        "interval": 60,
+        "exec": "~/dotfiles/hypr/scripts/hypridle.sh status",
+        "on-click": "~/dotfiles/hypr/scripts/hypridle.sh toggle",
+        "on-click-right": "hyprlock"
     },
 
     // Keyboard State
@@ -221,8 +212,7 @@
 
     // Clock
     "clock": {
-        // TIMEDATEFORMAT
-        "format": "{:%I:%M %p - %a}",
+        "format": "{:%H:%M %a}",
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // START CLOCK FORMAT
@@ -278,26 +268,28 @@
     },
     
     // Group Settings
-    "group/settings": {
+    "group/links": {
         "orientation": "horizontal",
         "modules": [
-            "custom/settings",
-            "custom/waybarthemes",
-            "custom/wallpaper"
+            //"custom/chatgpt",
+            "custom/empty"
         ]
     },
 
-    // Group Quicklinks
-    "group/quicklinks": {
-        "orientation": "horizontal",
+    // Group Settings
+    "group/settings": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 300,
+            "children-class": "not-memory",
+            "transition-left-to-right": true
+        },            
         "modules": [
-            "custom/browser",
-            "custom/filemanager",
-            "custom/teams",
-            "custom/sms",
-            "custom/steam",
-            "custom/chatgpt",
-         ]
+            "custom/settings",
+            "custom/waybarthemes",
+            "custom/wallpaper",
+            "custom/ml4w-hyprland-settings"
+        ]
     },
 
     // Network
@@ -311,7 +303,8 @@
         "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
-        "on-click": "~/dotfiles/.settings/networkmanager.sh"
+        "on-click": "alacritty --class dotfiles-floating -e nmtui",
+        "on-click-right": "~/dotfiles/.settings/networkmanager.sh"
     },
 
     // Battery
@@ -333,20 +326,20 @@
     // Pulseaudio
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format": "{icon}   {volume}%",
+        "format-bluetooth": "{volume}%  {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", " ", " "]
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
         },
         "on-click": "pavucontrol"
     },
@@ -366,16 +359,5 @@
         "format": "{user}",
         "interval": 60,
         "icon": false,
-    },
-
-    // Idle Inhibator
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "tooltip": true,
-        "format-icons":{
-            "activated": "",
-            "deactivated": ""
-        },
-        "on-click-right": "hyprlock"        
     }
 }

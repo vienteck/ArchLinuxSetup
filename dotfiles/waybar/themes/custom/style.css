@@ -46,15 +46,15 @@ window#waybar {
  * ----------------------------------------------------- */
 
  #workspaces {
-    margin: 3px 10px 3px 10px;
     border: 0px;
-    font-size: 30px;
+    margin:0px 0px 0px 0px;
+    font-size: 23px;
     color: @textcolor1;
 }
 
 #workspaces button {
     border: 0px;
-    margin:4px 7px 4px 0px;
+    margin:0px 0px 0px 0px;
     padding:0px 4px 0px 4px;
     color: @textcolor3;
     transition: all 0.5s ease-in-out;
@@ -79,7 +79,7 @@ tooltip {
     border-radius: 10px;
     background-color: @backgroundlight;
     opacity:0.8;
-    padding:20px;
+    padding:23px;
     margin:0px;
 }
 
@@ -92,10 +92,10 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #window {
-    margin: 0px 15px 0px 0px;
+    margin: 0px 5px 0px 0px;
     border-radius: 12px;
     color:@textcolor;
-    font-size:25px;
+    font-size:23px;
     font-weight:normal;
 }
 
@@ -135,8 +135,8 @@ window#waybar.empty #window {
 #custom-system,
 #custom-steam,
 #custom-waybarthemes {
-    margin-right: 20px;
-    font-size: 30px;
+    margin-right: 10px;
+    font-size: 23px;
     padding-left: 15px;
     font-weight: bold;
     color: @iconcolor;
@@ -165,14 +165,14 @@ window#waybar.empty #window {
 
  #idle_inhibitor {
     margin-right: 15px;
-    font-size: 30px;
+    font-size: 23px;
     font-weight: bold;
     color: @iconcolor;
 }
 
 #idle_inhibitor.activated {
-    margin-right: 15px;
-    font-size: 25px;
+    margin-right: 10px;
+    font-size: 23px;
     font-weight: bold;
     color: #dc2f2f;
 }
@@ -182,9 +182,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-appmenuicon {
-    font-size: 25px;
+    font-size: 23px;
     color: @textcolor;
-    margin: 0px 20px 0px 10px;
+    margin: 0px 23px 0px 10px;
 }
 
 /* -----------------------------------------------------
@@ -192,9 +192,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-exit {
-    margin: 0px 20px 0px 10px;
+    margin: 0px 10px 0px 10px;
     padding:0px;
-    font-size:30px;
+    font-size:23px;
     color: @iconcolor;
 }
 
@@ -203,7 +203,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-    font-size: 25px;
+    font-size: 23px;
     color: @textcolor;
     border-radius: 15px;
     margin: 0px 15px 0px 15px;
@@ -239,7 +239,7 @@ window#waybar.empty #window {
  #disk,#memory,#cpu,#language {
     margin:0px;
     padding:0px;
-    font-size:25px;
+    font-size:23px;
     color:@iconcolor;
 }
 
@@ -252,9 +252,9 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-    font-size: 25px;
+    font-size: 23px;
     color: @textcolor;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 15px 0px 20px;
 }
 
 /* -----------------------------------------------------
@@ -262,7 +262,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-    font-size: 25px;
+    font-size: 23px;
     color: @textcolor;
     border-radius: 15px;
     margin: 0px 15px 0px 0px;
@@ -277,7 +277,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-    font-size: 25px;
+    font-size: 23px;
     color: @textcolor;
     border-radius: 15px;
     margin: 0px 15px 0px 0px;
@@ -296,10 +296,10 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
  #bluetooth, #bluetooth.on, #bluetooth.connected {
-    font-size: 25px;
+    font-size: 23px;
     color: @textcolor;
     border-radius: 15px;
-    margin: 10px 20px 10px 15px;
+    margin: 10px 15px 10px 15px;
 }
 
 #bluetooth.off {
@@ -313,10 +313,10 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #battery {
-    font-size: 25px;
+    font-size: 23px;
     color: @textcolor;
     border-radius: 15px;
-    margin: 10px 20px 10px 15px;
+    margin: 10px 15px 10px 15px;
 }
 
 #battery.charging, #battery.plugged {

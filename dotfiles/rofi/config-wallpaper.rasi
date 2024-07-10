@@ -14,12 +14,12 @@ configuration {
     modi:                       "drun,run";
     font:                       "Fira Sans 11";
     show-icons:                 true;
-	hover-select:               true;
+	hover-select:               false;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
     drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";
-    
+    scroll-method: 1;
 }
 
 /* ---- Load font ---- */
@@ -36,7 +36,7 @@ configuration {
 
 /* ---- Window ---- */
 window {
-    width:                        1900px;
+    width:                        761px;
     x-offset:                     0px;
     y-offset:                     65px;
     spacing:                      0px;
@@ -75,7 +75,7 @@ imagebox {
 
 /* ---- Listbox ---- */
 listbox {
-    spacing:                     10px;
+    spacing:                     20px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "inputbar", "message", "listview" ];
@@ -143,18 +143,19 @@ listview {
     enabled:                      true;
     columns:                      6;
     lines:                        3;
-    cycle:                        true;
-    dynamic:                      true;
+    cycle:                        false;
+    dynamic:                      false;
     scrollbar:                    true;
     layout:                       vertical;
     reverse:                      false;
     spacing:                      10px;
     padding:                      10px;
     margin:                       0px;
-    fixed-height:                true;
-    fixed-columns:               true;    
+    fixed-height:                 true;
+    fixed-columns:                true;    
     background-color:             @background;
     border:                       0px;
+    flow:                         horizontal;      
 }
 
 /* ---- Element ---- */
@@ -226,7 +227,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        300px;
+    size:                        100px;
     cursor:                      inherit;
     horizontal-align:              0.5;
 }

@@ -18,12 +18,16 @@
     "spacing": 0,
 
     // Load Modules
-    "include": ["~/dotfiles/waybar/modules.json"],
+    "include": [
+        "~/dotfiles/.settings/waybar-quicklinks.json",
+        "~/dotfiles/waybar/modules.json"
+    ],
 
     // Modules Left
     "modules-left": [
         "custom/appmenuicon",
         "hyprland/workspaces",
+        "group/links",
         "group/settings",
         "group/quicklinks"
     ],
@@ -43,7 +47,8 @@
         "network",
         "group/hardware",
         "custom/cliphist",
-        "idle_inhibitor",
+        "custom/hypridle",
+        "custom/hyprshade",
         "custom/exit",
         "clock",
         "tray",

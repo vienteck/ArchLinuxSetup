@@ -21,8 +21,8 @@ export EDITOR=nvim
 # -----------------------------------------------------
 
 alias c='clear'
-alias nf='neofetch'
-alias pf='pfetch'
+alias nf='fastfetch'
+alias pf='fastfetch'
 alias ls='eza -a --icons'
 alias ll='eza -al --icons'
 alias lt='eza -a --tree --level=1 --icons'
@@ -44,12 +44,19 @@ alias ml4w='~/dotfiles/apps/ML4W_Welcome-x86_64.AppImage'
 alias cdebug="g++ --debug main.cpp -o main"
 alias devcpp="cd ~/dev/cpp/"
 alias devgo="cd ~/dev/go"
+alias cat="bat"
+alias head="bat --line-range 0:10"
+alias snort="sudo snort --daq-dir /usr/local/lib/daq_s3/lib/daq"
+alias ac="aircrack-ng"
+alias syncd="bash ~/dotfiles/scripts/backup.sh"
+alias mypostgres="podman exec -it mypostgres psql -U vi"
+alias cdzig="cd ~/dev/zig"
+alias zb="zig build-exe"
 
 # -----------------------------------------------------
 # Window Managers
 # -----------------------------------------------------
 
-alias Qtile='startx'
 # Hyprland with Hyprland
 
 # -----------------------------------------------------
@@ -126,14 +133,14 @@ eval "$(starship init bash)"
 # -----------------------------------------------------
 # PYWAL
 # -----------------------------------------------------
-cat ~/.cache/wal/sequences
+#cat ~/.cache/wal/sequences
 
 # -----------------------------------------------------
 # PFETCH if on wm
 # -----------------------------------------------------
 echo ""
 if [[ $(tty) == *"pts"* ]]; then
-   pfetch
+   fastfetch
 else
     if [ -f /bin/qtile ]; then
         echo "Start Qtile X11 with command Qtile"

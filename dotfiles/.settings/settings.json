@@ -1,7 +1,7 @@
 [
     {
         "key": "waybar_timeformat",
-        "value": "%I:%M %p"
+        "value": "%H:%M"
     },
     {
         "key": "waybar_dateformat",
@@ -24,12 +24,16 @@
         "value": true
     },
     {
+        "key": "waybar_taskbar",
+        "value": false
+    },
+    {
         "key": "waybar_network",
         "value": true
     },
     {
         "key": "waybar_chatgpt",
-        "value": true
+        "value": false
     },
     {
         "key": "waybar_systray",
@@ -45,14 +49,14 @@
     },
     {
         "key": "hypridle_hyprlock_timeout",
-        "value": 600
+        "value": 0
     },
     {
         "key": "hypridle_dpms_timeout",
-        "value": 680
+        "value": 0
     },
     {
         "key": "hypridle_suspend_timeout",
-        "value": 1800
+        "value": 0
     }
 ]

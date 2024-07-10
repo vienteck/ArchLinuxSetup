@@ -18,7 +18,7 @@ echo "Installing kitty terminal"
 yay -S alacritty --noconfirm
 
 echo "Installing command line text processing tools"
-yay -S sed awk grep bat tmux eza ncdu neofetch unimatrix github-cli --noconfirm
+yay -S sed awk grep ripgrep bat tmux eza ncdu neofetch unimatrix github-cli --noconfirm
 
 #Ethical Hacking Tools
 #yay -S nmap hydra aircrack-ng snort metasploit  --noconfirm
@@ -26,13 +26,13 @@ yay -S sed awk grep bat tmux eza ncdu neofetch unimatrix github-cli --noconfirm
 #Netoworking tools
 yay -S tcpdump rustscan htop openssh openvpn tor
 
-yay -S powertop fwupd fprintd libfprint imagemagick --noconfirm
+yay -S laptop-mode-tools fwupd fprintd libfprint imagemagick --noconfirm
 
 #Applications
-yay -S remmina gimp postman-bin libreoffice-still obsidian --noconfirm
+yay -S remmina gimp postman-bin libreoffice-still --noconfirm
 
 #Programming Languages
-yay -S go rustup pyenv nvm --noconfirm
+yay -S go rustup pyenv nvm--noconfirm
 
 #copy to share for systemwide sharing. Add any custom fonts in the fonts folder
 mkdir -p ~/.config/fontconfig
@@ -42,15 +42,15 @@ sudo fc-cache -f -v
 sudo cp $install_directory/fonts/local.conf ~/.config/fontconfig/fonts.conf
 sudo fc-cache -f -v
 
-
-
 mkdir ~/dotfiles-version
 cp $install_direcotry/files/hook.sh ~/dotfiles-verison
 
 mkdir ~/Downloads
 cd ~/Downloads
 
-git clone --depth=1 https://gitlab.com/stephan-raabe/dotfiles.git
+#Uncomment bottom 2 lines if you want to get a fresh copy of the build
+#rm -r dotfiles
+#git clone --depth=1 https://gitlab.com/stephan-raabe/dotfiles.git
 
 cd dotfiles
 
@@ -62,5 +62,7 @@ cd dotfiles
 #comment next line if you want ml4w dotfiles
 cp -r $install_directory/dotfiles ~/
 
-sudo ln -s ~/dotfiles/scripts/powertop.service /etc/systemd/system/
+#sudo ln -s ~/dotfiles/scripts/powertop.service /etc/systemd/system/
+#powertop has been replacedy by laptop-mode. It is much more reliable
+systemctl enable laptop-mode.service
 
