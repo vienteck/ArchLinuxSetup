@@ -50,17 +50,17 @@ cd ~/Downloads
 
 #Uncomment bottom 2 lines if you want to get a fresh copy of the build
 #rm -r dotfiles
-#git clone --depth=1 https://gitlab.com/stephan-raabe/dotfiles.git
+git clone --depth=1 https://gitlab.com/stephan-raabe/dotfiles.git
 
 cd dotfiles
 
 ./install.sh
 
-#sudo rm -r ~/dotfiles
+sudo rm -r ~/dotfiles
 
 #install custom dotfiles.
-#comment next line if you want ml4w dotfiles
-cp -r $install_directory/dotfiles ~/
+#uncomment next line if you want ml4w dotfiles
+cp -r $install_directory/custom_dotfiles ~/
 
 #sudo ln -s ~/dotfiles/scripts/powertop.service /etc/systemd/system/
 #powertop has been replacedy by laptop-mode. It is much more reliable
