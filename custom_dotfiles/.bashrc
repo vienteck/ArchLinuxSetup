@@ -52,6 +52,8 @@ alias syncd="bash ~/dotfiles/scripts/backup.sh"
 alias mypostgres="podman exec -it mypostgres psql -U vi"
 alias cdzig="cd ~/dev/zig"
 alias zb="zig build-exe"
+alias zbm="zig build-exe main.zig"
+alias savedotfiles="sudo rm -r ~/ArchLinuxSetup/custom_dotfiles/;mkdir ~/ArchLinuxSetup/custom_dotfiles/;cp -r ~/dotfiles/{.,}* ~/ArchLinuxSetup/custom_dotfiles/"
 
 # -----------------------------------------------------
 # Window Managers
@@ -140,7 +142,8 @@ eval "$(starship init bash)"
 # -----------------------------------------------------
 echo ""
 if [[ $(tty) == *"pts"* ]]; then
-   fastfetch
+    echo "The only way to make sense out of change is to plunge into it, move with it, and join the dance." - Alan Watts
+   #fastfetch
 else
     if [ -f /bin/qtile ]; then
         echo "Start Qtile X11 with command Qtile"

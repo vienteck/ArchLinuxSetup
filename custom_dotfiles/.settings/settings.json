@@ -1,7 +1,7 @@
 [
     {
         "key": "waybar_timeformat",
-        "value": "%H:%M"
+        "value": "%I:%M %p"
     },
     {
         "key": "waybar_dateformat",
