@@ -17,6 +17,9 @@ cd $install_directory
 echo "Installing kitty terminal"
 yay -S alacritty --noconfirm
 
+echo "Installing Socials"
+yay -S Discord --noconfirm
+
 echo "Installing command line text processing tools"
 yay -S sed awk grep ripgrep bat tmux eza ncdu neofetch unimatrix github-cli --noconfirm
 
@@ -29,10 +32,10 @@ yay -S tcpdump rustscan htop openssh openvpn tor
 yay -S laptop-mode-tools fwupd fprintd libfprint imagemagick --noconfirm
 
 #Applications
-yay -S remmina gimp postman-bin libreoffice-still --noconfirm
+yay -S remmina gimp  --noconfirm
 
 #Programming Languages
-yay -S go rustup pyenv nvm--noconfirm
+# yay -S go rustup pyenv nvm--noconfirm
 
 #copy to share for systemwide sharing. Add any custom fonts in the fonts folder
 mkdir -p ~/.config/fontconfig
@@ -49,12 +52,8 @@ mkdir ~/Downloads
 cd ~/Downloads
 
 #Uncomment bottom 2 lines if you want to get a fresh copy of the build
-#rm -r dotfiles
-git clone --depth=1 https://gitlab.com/stephan-raabe/dotfiles.git
+bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup.sh)
 
-cd dotfiles
-
-./install.sh
 
 sudo rm -r ~/dotfiles
 
