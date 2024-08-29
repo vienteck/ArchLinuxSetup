@@ -14,11 +14,11 @@ makepkg -si
 echo "Moving back to home directory"
 cd $install_directory
 
-echo "Installing kitty terminal"
-yay -S alacritty --noconfirm
+#echo "Installing kitty terminal"
+#yay -S alacritty --noconfirm
 
-echo "Installing Socials"
-yay -S Discord --noconfirm
+#echo "Installing Socials"
+#yay -S Discord --noconfirm
 
 echo "Installing command line text processing tools"
 yay -S sed awk grep ripgrep bat tmux eza ncdu neofetch unimatrix github-cli --noconfirm
@@ -27,7 +27,7 @@ yay -S sed awk grep ripgrep bat tmux eza ncdu neofetch unimatrix github-cli --no
 #yay -S nmap hydra aircrack-ng snort metasploit  --noconfirm
 
 #Netoworking tools
-yay -S tcpdump rustscan htop openssh openvpn tor
+#yay -S tcpdump rustscan htop openssh openvpn tor
 
 yay -S laptop-mode-tools fwupd fprintd libfprint imagemagick --noconfirm
 
@@ -45,21 +45,21 @@ sudo fc-cache -f -v
 sudo cp $install_directory/fonts/local.conf ~/.config/fontconfig/fonts.conf
 sudo fc-cache -f -v
 
-mkdir ~/dotfiles-version
-cp $install_direcotry/files/hook.sh ~/dotfiles-verison
+#mkdir ~/dotfiles-version
+#cp $install_direcotry/files/hook.sh ~/dotfiles-verison
 
-mkdir ~/Downloads
-cd ~/Downloads
+#mkdir ~/Downloads
+#cd ~/Downloads
 
 #Uncomment bottom 2 lines if you want to get a fresh copy of the build
-bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup.sh)
+#bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup.sh)
 
 
-sudo rm -r ~/dotfiles
+#sudo rm -r ~/dotfiles
 
 #install custom dotfiles.
 #uncomment next line if you want ml4w dotfiles
-cp -r $install_directory/custom_dotfiles ~/
+#cp -r $install_directory/custom_dotfiles ~/
 
 #sudo ln -s ~/dotfiles/scripts/powertop.service /etc/systemd/system/
 #powertop has been replacedy by laptop-mode. It is much more reliable
