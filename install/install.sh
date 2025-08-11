@@ -29,13 +29,17 @@ yay -S sed awk grep ripgrep bat tmux eza ncdu neofetch unimatrix github-cli --no
 #Netoworking tools
 #yay -S tcpdump rustscan htop openssh openvpn tor
 
+#Laptop Specific Utilities
 yay -S laptop-mode-tools fwupd fprintd libfprint imagemagick --noconfirm
 
 #Applications
-yay -S remmina gimp  --noconfirm
+yay -S remmina  --noconfirm
 
 #Programming Languages
-# yay -S go rustup pyenv nvm--noconfirm
+#yay -S go rustup pyenv nvm--noconfirm
+
+#Utilities
+yay -S downgrade --noconfirm
 
 #copy to share for systemwide sharing. Add any custom fonts in the fonts folder
 mkdir -p ~/.config/fontconfig
